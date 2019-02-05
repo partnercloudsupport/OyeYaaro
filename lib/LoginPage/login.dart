@@ -309,7 +309,7 @@ class _LoginPageState extends State<LoginPage> {
     loadData();
     return new Scaffold(
       key: _scaffoldKey,
-      appBar: new AppBar(
+      appBar:  AppBar(
           title: new Text('Verify Your Phone Number'), centerTitle: true),
       resizeToAvoidBottomPadding: true,
       body: body(),
@@ -439,7 +439,7 @@ class _LoginPageState extends State<LoginPage> {
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
                 splashColor: Colors.green,
-                color: Colors.indigo[400],
+                color: Colors.indigo[900],
                 // shape: RoundedRectangleBorder(
                 //     borderRadius: BorderRadius.circular(30.0)),
                 onPressed: !verifybtn

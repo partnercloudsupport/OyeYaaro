@@ -1058,12 +1058,23 @@ class ChatScreenState extends State<ChatScreen> {
               children: <Widget>[
                 isLastMessageLeft(index)
                     ? Material(
-                        child:
-                        
-                         CachedNetworkImage(
+                        // child: Container(
+                        //   width: 50.0,
+                        //   height: 50.0,
+                        //   decoration:  BoxDecoration(
+                        //     color: Colors.indigo[900],
+                        //     shape: BoxShape.circle,
+                        //   ),
+                        //   child: Container(
+                        //     decoration:  BoxDecoration(
+                        //     color: Colors.indigo[900],
+                        //     shape: BoxShape.circle,
+                        //   ),
+                        //     margin: EdgeInsets.all(10.0),
+                        child: CachedNetworkImage(
+                          width: 50.0,
+                          height: 50.0,
                           placeholder: Container(
-                            width: 50.0,
-                            height: 50.0,
                             decoration: BoxDecoration(
                               shape: BoxShape.circle,
                             ),
@@ -1077,14 +1088,14 @@ class ChatScreenState extends State<ChatScreen> {
                           imageUrl: 'http://54.200.143.85:4200/profiles/then/' +
                               document['senderId'] +
                               '.jpg',
-                          width: 50.0,
-                          height: 50.0,
                           fit: BoxFit.cover,
                         ),
+                        //   ),
+                        // ),
                         borderRadius: BorderRadius.all(
                           Radius.circular(50.0),
                         ),
-                        
+                        shadowColor: Colors.indigo[900],
                         clipBehavior: Clip.hardEdge,
                       )
                     : Container(width: 50.0),

@@ -21,9 +21,9 @@ class GroupScreenState extends StatelessWidget {
         backgroundColor: Theme.of(context).accentColor,
         child:
         Image(
-          image: new AssetImage("assets/searchGroup.png"),
-          width: 45.0,
-          height: 45.0,
+          image: new AssetImage("assets/test.png"),
+          width: 35.0,
+          height: 35.0,
           fit: BoxFit.scaleDown,
           alignment: Alignment.center,
         ),

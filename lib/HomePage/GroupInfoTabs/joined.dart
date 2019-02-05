@@ -98,27 +98,30 @@ class UsersList extends StatelessWidget {
     return Container(
       child: ListView.builder(
           itemCount: users.length,
-          padding:  EdgeInsets.fromLTRB(0.0,5.0,0.0,5.0),
+          padding: EdgeInsets.fromLTRB(0.0, 5.0, 0.0, 5.0),
           itemBuilder: (context, position) {
             return Column(
               children: <Widget>[
                 ListTile(
                     leading: GestureDetector(
-                        child:
-                        Container(
-                          width: 60.0,
+                      child:Container(
+                         width: 60.0,
                           height: 60.0,
                            decoration: new BoxDecoration(
-                              color: Colors.white,
-                             shape: BoxShape.circle,
-                              border:  Border.all(color: Colors.black,),
-                             
-                           ),
+                            color: Colors.indigo[900],
+                            shape: BoxShape.circle,
+                          ),
+                        child: Container(
+                            margin: EdgeInsets.all(2.5),                         
+                          decoration: new BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
                           child: Container(
-                            margin: EdgeInsets.all(1.0),
+                            margin: EdgeInsets.all(2.0),
                             decoration: new BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey,                              
+                              color: Colors.grey,
                               image: new DecorationImage(
                                 fit: BoxFit.cover,
                                 image: new NetworkImage(
@@ -127,6 +130,7 @@ class UsersList extends StatelessWidget {
                             ),
                           ),
                         ),
+                    ),
                         //  CircleAvatar(
                         //   foregroundColor: Theme.of(context).primaryColor,
                         //   backgroundColor: Colors.grey,
@@ -137,8 +141,9 @@ class UsersList extends StatelessWidget {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
-                                  builder: (context) =>
-                                      ProfilePage(checkUserProfilePin: users[position].UserPin)));
+                                  builder: (context) => ProfilePage(
+                                      checkUserProfilePin:
+                                          users[position].UserPin)));
                         }),
                     title: GestureDetector(
                       child: Text(

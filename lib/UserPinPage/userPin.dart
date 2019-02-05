@@ -73,7 +73,7 @@ class _UserPinPageState extends State<UserPinPage> {
                         style: TextStyle(color: Colors.white, fontSize: 18),
                       ),
                       splashColor: Colors.green,
-                      color: Colors.indigo[400],
+                      color: Colors.indigo[900],
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0)),
                       onPressed: () {
@@ -92,7 +92,7 @@ class _UserPinPageState extends State<UserPinPage> {
                         Icons.arrow_back,
                         color: Colors.white,
                       ),
-                      backgroundColor: Colors.indigo[400],
+                      backgroundColor: Colors.indigo[900],
                       onPressed: () => clearSharedPref()),
                 )
               ])

@@ -13,7 +13,6 @@ import 'package:connect_yaar/ProfilePage/profile.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import '../HomePage/pages/New_Group/createGroup.dart';
-// import '../HomePage/pages/New_Group/searchGroup2.dart';
 
 class Choice {
   const Choice({this.title, this.icon});
@@ -32,8 +31,7 @@ class ConnectYaarHomePage extends StatefulWidget {
 
 class _ConnectYaarHomePageState extends State<ConnectYaarHomePage>
     with SingleTickerProviderStateMixin {
-
-      var downloadedSongPath;
+  var downloadedSongPath;
   //#fcm
   FirebaseMessaging _firebaseMessaging = new FirebaseMessaging();
 
@@ -150,7 +148,7 @@ class _ConnectYaarHomePageState extends State<ConnectYaarHomePage>
     //   }).catchError((e) {
     //     print("*err:*" + e);
     //   });
-    // } else 
+    // } else
     if (choice.title == 'Profile') {
       print('profil called...');
       Navigator.push(
@@ -248,11 +246,17 @@ class _ConnectYaarHomePageState extends State<ConnectYaarHomePage>
           ],
         ),
         actions: <Widget>[
-          // new IconButton(
-          //   icon:Icon(Icons.home),
-          //   onPressed: (){},),
-          new Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 4.0),
+          IconButton(
+            icon: Icon(Icons.home),
+            onPressed: () {
+               Navigator.pushReplacementNamed(context, '/homepage');
+              // setState(() {
+              //   _tabController = _tabController;
+              // });
+            },
+          ),
+          Padding(
+            padding: EdgeInsets.symmetric(horizontal: 4.0),
           ),
           PopupMenuButton<Choice>(
             onSelected: onItemMenuPress,
@@ -276,7 +280,6 @@ class _ConnectYaarHomePageState extends State<ConnectYaarHomePage>
               }).toList();
             },
           ),
-         
         ],
       ),
       body: WillPopScope(
@@ -330,6 +333,4 @@ class _ConnectYaarHomePageState extends State<ConnectYaarHomePage>
       print('Got Service Error ${e}');
     }
   }
-
-  
 }

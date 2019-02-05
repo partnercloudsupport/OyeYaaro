@@ -22,30 +22,30 @@ class ChatScreenState extends StatelessWidget {
               : Center(child: CircularProgressIndicator());
         },
       ),
-      floatingActionButton: new FloatingActionButton(
-        backgroundColor: Theme.of(context).accentColor, 
-        child: 
-        Image(
-          image: new AssetImage("assets/searchGroup.png"),
-          width: 45.0,
-          height: 45.0,
-          fit: BoxFit.scaleDown,
-          alignment: Alignment.center,
-        ),
+      // floatingActionButton: new FloatingActionButton(
+      //   backgroundColor: Theme.of(context).accentColor, 
+      //   child: 
+      //   Image(
+      //     image: new AssetImage("assets/searchGroup.png"),
+      //     width: 45.0,
+      //     height: 45.0,
+      //     fit: BoxFit.scaleDown,
+      //     alignment: Alignment.center,
+      //   ),
 
-        // Icon(
-        //   Icons.search,
-        //   color: Colors.white,
-        // ),
-        onPressed: () {
-          Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => CreateGroup(),
-            ),
-          );
-        },
-      ),
+      //   // Icon(
+      //   //   Icons.search,
+      //   //   color: Colors.white,
+      //   // ),
+      //   onPressed: () {
+      //     Navigator.push(
+      //       context,
+      //       MaterialPageRoute(
+      //         builder: (context) => CreateGroup(),
+      //       ),
+      //     );
+      //   },
+      // ),
     );
   }
 }

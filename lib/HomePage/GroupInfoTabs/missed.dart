@@ -84,20 +84,24 @@ class PhotosList extends StatelessWidget {
               children: <Widget>[
                 ListTile(
                   leading: GestureDetector(
-                    child: 
-                    Container(
-                          width: 60.0,
+                    child:Container(
+                         width: 60.0,
                           height: 60.0,
                            decoration: new BoxDecoration(
-                              color: Colors.white,
-                             shape: BoxShape.circle,
-                              border: new Border.all(color: Colors.black,),
-                           ),
+                            color: Colors.indigo[900],
+                            shape: BoxShape.circle,
+                          ),
+                        child: Container(
+                            margin: EdgeInsets.all(2.5),                         
+                          decoration: new BoxDecoration(
+                            color: Colors.white,
+                            shape: BoxShape.circle,
+                          ),
                           child: Container(
-                            margin: EdgeInsets.all(1.0),
+                            margin: EdgeInsets.all(2.0),
                             decoration: new BoxDecoration(
                               shape: BoxShape.circle,
-                              color: Colors.grey,                              
+                              color: Colors.grey,
                               image: new DecorationImage(
                                 fit: BoxFit.cover,
                                 image: new NetworkImage(
@@ -106,6 +110,7 @@ class PhotosList extends StatelessWidget {
                             ),
                           ),
                         ),
+                    ),
                     // CircleAvatar(
                     //   foregroundColor: Theme.of(context).primaryColor,
                     //   backgroundColor: Colors.grey,

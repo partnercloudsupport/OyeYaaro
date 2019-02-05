@@ -39,15 +39,16 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage>
       Container(
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.centerLeft,
-            end: Alignment.centerRight,
-            // stops: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
-            colors: <Color>[
-              Color(0xffb6de9f5),
-              Color(0xffb76dff5),
-              Color(0xffb82d0f7),
-              Color(0xffb93bcfa),
-              Color(0xffb98b6fc),
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            stops: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+            colors: [
+              Colors.indigo[900],
+              Colors.deepPurple[900],
+              Colors.indigo[800],
+              Colors.deepPurple[800],
+              Colors.indigo[700],
+              Colors.blue[900],
             ],
           ),
         ),
@@ -103,27 +104,24 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage>
                     child: CircleAvatar(
                         backgroundColor: Colors.white,
                         radius: 50.0,
-                        child: ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) {
-                            return ui.Gradient.linear(
-                              Offset(4.0, 24.0),
-                              Offset(24.0, 4.0),
-                              [
-                                Color(0xffb6de9f5),
-                                // Color(0xffb76dff5),
-                                // Color(0xffb82d0f7),
-                                // Color(0xffb93bcfa),
-                                Color(0xffb98b6fc),
-                              ],
-                            );
-                          },
+                        // child: ShaderMask(
+                        //   blendMode: BlendMode.srcIn,
+                        //   shaderCallback: (Rect bounds) {
+                        //     return ui.Gradient.linear(
+                        //       Offset(4.0, 24.0),
+                        //       Offset(24.0, 4.0),
+                        //       [
+                        //         Color(0xffb6de9f5),
+                        //         Color(0xffb98b6fc),
+                        //       ],
+                        //     );
+                        //   },
                           child: Icon(
                             Icons.group,
                             color: Colors.indigo[900],
                             size: _iconAnimationBounce.value * 70.0,
                           ),
-                        )
+                        // )
                         ),
                   ),
                   Padding(padding: EdgeInsets.all(30.0)),
@@ -172,7 +170,7 @@ class _PrivacyPolicyPageState extends State<PrivacyPolicyPage>
                                   .pushReplacementNamed('/loginpage');
                             }
                           : null,
-                      color: Colors.indigo[900]),
+                      color: Colors.blueAccent),
                       
                 ]))),
       ])

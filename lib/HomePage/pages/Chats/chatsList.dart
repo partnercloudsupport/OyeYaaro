@@ -19,16 +19,25 @@ class ListViewPosts extends StatelessWidget {
               children: <Widget>[
                 ListTile(
                     leading: GestureDetector(
-                        child: Container(
-                          width: 65.0,
+                      child:Container(
+                        width: 65.0,
                           height: 65.0,
+                           decoration:  BoxDecoration(
+                              color: Colors.indigo[900],
+                             shape: BoxShape.circle,
+                            //  border:  Border.all(color: Colors.black)
+                           ),
+                        child: Container(
+                          // width: 63.0,
+                          // height: 63.0,
+                            margin: EdgeInsets.all(2.5),                          
                            decoration:  BoxDecoration(
                               color: Colors.white,
                              shape: BoxShape.circle,
-                             border:  Border.all(color: Colors.black)
+                            //  border:  Border.all(color: Colors.black)
                            ),
                           child: Container(
-                            margin: EdgeInsets.all(1.0),
+                            margin: EdgeInsets.all(2.0),
                             decoration:  BoxDecoration(
                               color: Colors.grey,
                               shape: BoxShape.circle,
@@ -40,6 +49,7 @@ class ListViewPosts extends StatelessWidget {
                             ),
                           ),
                         ),
+                    ),
                         onTap: () {
                           Navigator.push(
                               context,

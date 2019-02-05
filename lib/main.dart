@@ -28,8 +28,8 @@ class MyApp extends StatelessWidget {
         home: MainPage(), //new _Splash(),
         theme: ThemeData(
           brightness: Brightness.light,
-          primaryColor: Colors.indigo[400],
-          accentColor: Colors.indigo[400],
+          primaryColor: Colors.indigo[900],
+          accentColor: Colors.indigo[900],
         ),
         routes: <String, WidgetBuilder>{
           '/profilepage': (BuildContext context) => ProfilePage(),
@@ -266,16 +266,17 @@ class _MainPageState extends State<MainPage>
         Container(
           decoration: BoxDecoration(
             gradient: LinearGradient(
-              begin: Alignment.centerLeft,
-              end: Alignment.centerRight,
-              // stops: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
-              colors: <Color>[
-                Color(0xffb6de9f5),
-                Color(0xffb76dff5),
-                Color(0xffb82d0f7),
-                Color(0xffb93bcfa),
-                Color(0xffb98b6fc),
-              ],
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              stops: [0.3, 0.4, 0.5, 0.6, 0.7, 0.8],
+              colors: [
+              Colors.indigo[900],
+              Colors.deepPurple[900],
+              Colors.indigo[800],
+              Colors.deepPurple[800],
+              Colors.indigo[700],
+              Colors.blue[900],
+            ],
             ),
           ),
         ),
@@ -309,29 +310,29 @@ class _MainPageState extends State<MainPage>
                     CircleAvatar(
                         backgroundColor: Colors.white,
                         radius: 60.0,
-                        child: ShaderMask(
-                          blendMode: BlendMode.srcIn,
-                          shaderCallback: (Rect bounds) {
-                            return ui.Gradient.linear(
-                              Offset(4.0, 24.0),
-                              Offset(24.0, 4.0),
-                              [
-                                Color(0xffb6de9f5),
-                                Color(0xffb98b6fc),
-                              ],
-                            );
-                          },
-                          child: Icon(
-                            Icons.group,
-                            color: Colors.indigo[900],
-                            size: 80.0,
-                          ),
-                        )
-                        // Icon(
-                        //   Icons.group,
-                        //   color: Colors.indigo[900],
-                        //   size: 80.0,
-                        // ),
+                        child: 
+                        // ShaderMask(
+                        //   blendMode: BlendMode.srcIn,
+                        //   shaderCallback: (Rect bounds) {
+                        //     return ui.Gradient.linear(
+                        //       Offset(4.0, 24.0),
+                        //       Offset(24.0, 4.0),
+                        //       [
+                        //         Color(0xffb6de9f5),
+                        //         Color(0xffb98b6fc),
+                        //       ],
+                        //     );
+                        //   },
+                        //   child: Icon(
+                        //     Icons.group,
+                        //     size: 80.0,
+                        //   ),
+                        // )
+                        Icon(
+                          Icons.group,
+                          color: Colors.indigo[900],
+                          size: 80.0,
+                        ),
                         ),
                     Padding(padding: EdgeInsets.all(40.0)),
                     loadingSpinner(_scaffoldKey),
